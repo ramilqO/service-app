@@ -1,11 +1,7 @@
 interface Colors {
   background: string; // Цвет фона
-  text: string; // Цвет текста
   primary: string; // Основной цвет
   secondary: string; // Вторичный цвет
-  accent: string; // Акцентный цвет
-  border: string; // Цвет границ
-  link: string; // Цвет ссылок
 }
 
 interface Fonts {
