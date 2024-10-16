@@ -1,11 +1,11 @@
-import { View, Text } from 'react-native';
+import Router from '@/components/globals/Router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function RootLayout() {
 
   return (
     <SafeAreaView>
-      <Text>Привет, EXPO</Text>
+      <Router />
     </SafeAreaView>
   );
 }
