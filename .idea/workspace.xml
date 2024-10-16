@@ -7,11 +7,13 @@
     <list default="true" id="d1480a87-e6f6-4d4f-9a79-f5be6c0547a0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useColorScheme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useColorScheme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useColorScheme.web.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useThemeColor.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/globals/Layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/globals/Router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/globals/Router/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/globals/Router/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/globals/Router/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/globals/Tabs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/globals/Tabs/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/globals/Tabs/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/globals/Tabs/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/providers/ThemeProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/providers/ThemeProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/EmployersList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/EmployersList/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

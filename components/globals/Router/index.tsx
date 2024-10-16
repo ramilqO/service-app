@@ -7,7 +7,7 @@ const Router = () => {
         <NativeRouter>
             <Routes>
                 {routes && routes.map(({ path, element }) => {
-                    return <Route path={path} element={element} />
+                    return <Route key={path} path={path} element={element} />
                 })}
             </Routes>
         </NativeRouter>

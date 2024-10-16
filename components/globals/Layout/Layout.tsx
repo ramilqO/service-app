@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import { View } from 'react-native';
-import Header from './Info';
-import Tabs from './Tabs';
+import Header from '../Info';
+import Tabs from '../Tabs';
 
 interface ILayout {
     showTabs?: boolean;
