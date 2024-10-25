@@ -19,7 +19,7 @@ const Router = () => {
                     },
                     headerTintColor: '#fff',
                     headerTitleStyle: {
-                        fontWeight: '700',
+                        // fontWeight: 700,
                         fontSize: 16,
                     },
                 }}

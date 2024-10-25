@@ -16,17 +16,20 @@ export const styles = (theme: ITheme) =>
     },
     name: {
       fontSize: theme.fonts.size.heading,
-      fontWeight: theme.fonts.weight,
+      // fontWeight: theme.fonts.weight,
       color: theme.colors.default,
     },
     profession: {
       fontSize: theme.fonts.size.body,
-      fontWeight: theme.fonts.weight,
+      // fontWeight: theme.fonts.weight,
       color: "#828282",
     },
     phone: {
       color: theme.colors.primary,
-      fontWeight: theme.fonts.weight,
+      // fontWeight: theme.fonts.weight,
       fontSize: theme.fonts.size.body,
+    },
+    phoneWrap: {
+      width: "35%",
     },
   });

@@ -5,6 +5,7 @@ import { View, Text, SectionList, TouchableOpacity } from 'react-native';
 import { styles } from "./styles";
 import { themes } from '@/utils/themes';
 import useTheme from '@/hooks/useTheme';
+import { useRoute } from '@react-navigation/native';
 
 const SectionListItem: FC<{ time: string; distance: string }> = ({ time, distance }) => {
     const theme = useTheme();
@@ -22,11 +23,12 @@ const SectionListItem: FC<{ time: string; distance: string }> = ({ time, distanc
     );
 }
 
-const EmployerMove: FC = ({ route }) => {
+const EmployerMove: FC = () => {
     const theme = useTheme();
     const themedStyles = styles(themes[theme]);
+    const route = useRoute();
 
-    const employer = data.find(item => item.id === route.params.id);    // любые другие запросы к API для получения передвижений
+    const employer = data.find(item => item.id === route.params?.id);    // любые другие запросы к API для получения передвижений
 
     if (!employer) {
         return (
@@ -36,16 +38,19 @@ const EmployerMove: FC = ({ route }) => {
         );
     }
 
-    const movements = employer.movements || [];
+    const movements = employer.movements;
+
+    console.log(movements);
+
 
     return (
         <Layout>
             <SectionList
+                keyExtractor={(item) => item.id + item.distance}
                 sections={movements.map(movement => ({
                     title: movement.date,
                     data: movement.data,
                 }))}
-                keyExtractor={(item) => item.id + item.distance}
                 renderItem={({ item }) => <SectionListItem time={item.time} distance={item.distance} />}
                 renderSectionHeader={({ section }) => (
                     <View style={themedStyles.section}>

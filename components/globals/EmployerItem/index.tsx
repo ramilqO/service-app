@@ -28,9 +28,11 @@ const EmployerItem: FC<IEmployerItem> = ({ id, name, profession, phone }) => {
                 <View style={themedStyles.wrapper}>
                     <Text style={themedStyles.name}>{name}</Text>
                     <Text style={themedStyles.profession}>{profession}</Text>
-                    <Text style={themedStyles.phone}>
-                        <TouchableOpacity onPress={handlePhonePress}>{phone}</TouchableOpacity>
-                    </Text>
+                    <View style={themedStyles.phoneWrap}>
+                        <TouchableOpacity onPress={handlePhonePress}>
+                            <Text style={themedStyles.phone}>{phone}</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
         </TouchableOpacity>

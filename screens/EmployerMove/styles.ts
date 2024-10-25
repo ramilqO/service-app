@@ -14,7 +14,6 @@ export const styles = (theme: ITheme) =>
     sectionHeader: {
       color: theme.colors.default,
       fontSize: theme.fonts.size.heading,
-      fontWeight: theme.fonts.weight,
     },
     item: {
       backgroundColor: "#F5F5F5",
@@ -28,11 +27,9 @@ export const styles = (theme: ITheme) =>
     time: {
       color: theme.colors.primary,
       fontSize: theme.fonts.size.heading,
-      fontWeight: theme.fonts.weight,
     },
     distance: {
       color: "#828282",
       fontSize: theme.fonts.size.body,
-      fontWeight: theme.fonts.weight,
     },
   });

@@ -12,7 +12,7 @@ export const routes = [
   {
     path: "/map",
     element: EmployersMap,
-    headerShown: true,
+    headerShown: false,
   },
   {
     path: "/employer",
