@@ -16,9 +16,10 @@ export const themes: Record<string, ITheme> = {
       weight: 500,
     },
   },
+
   dark: {
     colors: {
-      default: '#fff',
+      default: 'white',
       background: "#121212", // Темный фон
       primary: "#BB86FC", // Основной цвет
       secondary: "#03DAC6", // Вторичный цвет

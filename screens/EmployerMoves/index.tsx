@@ -5,27 +5,27 @@ import { View, Text, SectionList, TouchableOpacity } from 'react-native';
 import { styles } from "./styles";
 import { themes } from '@/utils/themes';
 import useTheme from '@/hooks/useTheme';
-import { useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 const SectionListItem: FC<{ time: string; distance: string }> = ({ time, distance }) => {
     const theme = useTheme();
     const themedStyles = styles(themes[theme]);
 
     return (
-        <TouchableOpacity>
-            <View style={themedStyles.item}>
-                <View style={themedStyles.itemWrapper}>
-                    <Text style={themedStyles.time}>{time}</Text>
-                    <Text style={themedStyles.distance}>{distance}</Text>
-                </View>
+        <View style={themedStyles.item}>
+            <View style={themedStyles.itemWrapper}>
+                <Text style={themedStyles.time}>{time}</Text>
+                <Text style={themedStyles.distance}>{distance}</Text>
             </View>
-        </TouchableOpacity>
+        </View>
     );
 }
 
-const EmployerMove: FC = () => {
+const EmployerMoves: FC = () => {
     const theme = useTheme();
     const themedStyles = styles(themes[theme]);
+
+    const navigation = useNavigation<any>();
     const route = useRoute();
 
     const employer = data.find(item => item.id === route.params?.id);    // любые другие запросы к API для получения передвижений
@@ -40,9 +40,6 @@ const EmployerMove: FC = () => {
 
     const movements = employer.movements;
 
-    console.log(movements);
-
-
     return (
         <Layout>
             <SectionList
@@ -51,7 +48,15 @@ const EmployerMove: FC = () => {
                     title: movement.date,
                     data: movement.data,
                 }))}
-                renderItem={({ item }) => <SectionListItem time={item.time} distance={item.distance} />}
+                renderItem={({ item }) =>
+                    <TouchableOpacity onPress={() => navigation.navigate('/employer', {
+                        time: item.time,
+                        distance: item.distance,
+                    })}>
+                        <SectionListItem time={item.time} distance={item.distance} />
+                    </TouchableOpacity>
+
+                }
                 renderSectionHeader={({ section }) => (
                     <View style={themedStyles.section}>
                         <Text style={themedStyles.sectionHeader}>{section.title}</Text>
@@ -62,4 +67,4 @@ const EmployerMove: FC = () => {
     );
 };
 
-export default EmployerMove;
+export default EmployerMoves;

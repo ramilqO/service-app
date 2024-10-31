@@ -1,5 +1,5 @@
 import Employer from "@/screens/Employer";
-import EmployerMove from "@/screens/EmployerMove";
+import EmployerMoves from "@/screens/EmployerMoves";
 import EmployersList from "@/screens/EmployersList";
 import EmployersMap from "@/screens/EmployersMap";
 
@@ -21,7 +21,7 @@ export const routes = [
   },
   {
     path: "/move",
-    element: EmployerMove,
+    element: EmployerMoves,
     headerShown: true,
   },
 ];

@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useColorScheme } from 'react-native';
 import { themes } from '@/utils/themes';
 
-export const ThemeContext = createContext<keyof typeof themes>('light'); // Контекст для текущей темы
+export const ThemeContext = createContext<keyof typeof themes>('dark'); // Контекст для текущей темы
 export const SetterContext = createContext<React.Dispatch<React.SetStateAction<keyof typeof themes>> | null>(null); // Контекст для изменения темы
 
 const ThemeProvider = ({ children }: { children: ReactNode }) => {
